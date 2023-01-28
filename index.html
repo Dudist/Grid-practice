@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body{
+        font-size: 1.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /*grid-auto-rows: 150px;*/
+        gap: 20px;
+        grid-template-rows: repeat(4, 150px);
+
+    }
+    .container div {
+        background-color: rgba(4, 0, 236, 0.133);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(2) {
+        background-color: pink;
+        grid-column: span 3;
+
+    }
+    .container div:nth-child(4) {
+        background-color: gold;
+        color: black;
+        grid-row: span 2;
+    }
+    .container div:nth-child(7) {
+        background-color: black;
+        color: red;
+        grid-column: 3 / -1;
+    }
+    .container div:nth-child(3) {
+        background-color: aqua;
+        color: black;
+        grid-row-start: 3;
+        grid-row-end: -1;
+    }
+
+
+</style>
+
+
+<body>
+    <div class="container">
+    <div>one</div>
+    <div>two</div>
+    <div>three</div>
+    <div>four</div>
+    <div>five</div>
+    <div>six</div>
+    <div>sever</div>
+    <div>eight</div>
+    <div>nine</div>
+    <div>ten</div>
+    </div> 
+</body>
